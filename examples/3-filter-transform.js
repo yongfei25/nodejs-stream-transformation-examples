@@ -5,8 +5,8 @@ const split = require('split2')
 
 // Declare the paths
 const dataLib = require('./data-lib')
-const sourceFile = dataLib.getMockDataPath()
-const targetFile = path.join(dataLib.getOutputDir(), '3-filter-transform-result')
+const sourcePath = dataLib.getMockDataPath()
+const targetPath = path.join(dataLib.getOutputDir(), '3-filter-transform-result.gz')
 
 // Empty counter
 let counter = 0
@@ -45,12 +45,12 @@ transform.on('empty_email', (obj) => {
 })
 
 // Read, gunzip, apply line break.
-let stream = fs.createReadStream(sourceFile)
+let stream = fs.createReadStream(sourcePath)
   .pipe(zlib.createGunzip())
   .pipe(split())
   .pipe(transform)
   .pipe(zlib.createGzip())
-  .pipe(fs.createWriteStream(targetFile))
+  .pipe(fs.createWriteStream(targetPath))
 
 stream.on('error', (err) => {
   console.error(err)
