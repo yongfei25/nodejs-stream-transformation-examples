@@ -10,7 +10,5 @@ https://nodejs.org/api/stream.html#stream_api_for_stream_consumers
 1. [Copy & gunzip file.](examples/1-copy-unzip.js)
 2. [Read & break data into lines.](examples/2-line-break.js)
 3. [Filter and transform data.](examples/3-filter-transform.js)
-4. [Fork to multiple output destination.](examples/4-fork-stream.js)
-5. Stream transform data from S3 object to S3 object.
-6. Filter records then write to SQS queue.
-7. Stream records recursively from S3 path.
+4. [Using stream to transform data from/to S3 object.](examples/4-aws-s3-stream.js)
+5. [Fork to multiple output destination.](examples/5-fork-stream.js)

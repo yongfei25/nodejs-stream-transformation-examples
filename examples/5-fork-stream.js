@@ -7,8 +7,8 @@ const { Transform } = require('stream')
 // Declare the paths
 const dataLib = require('./data-lib')
 const sourcePath = dataLib.getMockDataPath()
-const outputPathMale = path.join(dataLib.getOutputDir(), '4-fork-stream-male.gz')
-const outputPathFemale = path.join(dataLib.getOutputDir(), '4-fork-stream-female.gz')
+const outputPathMale = path.join(dataLib.getOutputDir(), '5-fork-stream-male.gz')
+const outputPathFemale = path.join(dataLib.getOutputDir(), '5-fork-stream-female.gz')
 
 // Create the readable stream
 const reader = fs.createReadStream(sourcePath)
