@@ -3,10 +3,10 @@ const zlib = require('zlib')
 
 // Declare the paths
 const dataLib = require('./data-lib')
-const sourceFile = dataLib.getMockDataPath()
+const sourcePath = dataLib.getMockDataPath()
 
 // Create a readable stream
-const reader = fs.createReadStream(sourceFile)
+const reader = fs.createReadStream(sourcePath)
 
 // Pipe data to a transform stream created with `split2` package.
 const split = require('split2')
