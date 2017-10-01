@@ -13,6 +13,7 @@
         "standard": "^10.0.3"
     },
     "dependencies": {
+        "aws-sdk": "^2.125.0",
         "split2": "^2.2.0"
     }
 }
