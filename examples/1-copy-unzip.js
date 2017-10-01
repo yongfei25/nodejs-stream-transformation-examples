@@ -9,6 +9,7 @@ const targetPath = path.join(dataLib.getOutputDir(), '1-copy-unzip-result')
 
 // Create a Readable stream
 const read = fs.createReadStream(sourcePath)
+read.on('finish', () => console.log('No more data'))
 
 // zlib.createGunzip() returns a Transform stream that gunzip the data it receives
 const transform = zlib.createGunzip()
